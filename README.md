@@ -1,0 +1,52 @@
+# EJERCICIO_1 - Automatización con Serenity BDD + Screenplay
+
+Proyecto de automatización de pruebas E2E para la tienda [OpenCart](http://opencart.abstracta.us) usando el patrón Screenplay.
+
+**Autor**: Jean Pierre Villacis
+
+## Tecnologías
+
+- Java 17
+- Serenity BDD 4.2.9
+- Cucumber 7
+- Selenium 4
+- Gradle
+
+## Escenario automatizado
+
+Flujo de compra como invitado:
+1. Buscar un producto
+2. Agregarlo al carrito
+3. Proceder al checkout como invitado
+4. Completar datos de envío
+5. Seleccionar método de entrega
+6. Confirmar la orden
+
+## Estructura del proyecto
+
+```
+src/test/java/screenplay/
+├── interactions/   # Acciones atómicas reutilizables
+├── tasks/          # Tareas de negocio
+├── questions/      # Validaciones
+├── ui/             # Localizadores de elementos
+├── model/          # Datos de prueba
+├── stepdefinitions/# Definición de pasos Cucumber
+└── runner/         # Configuración del runner
+
+src/test/resources/
+├── features/       # Escenarios Gherkin
+└── serenity.conf   # Configuración Serenity
+```
+
+## Ejecutar pruebas
+
+```bash
+./gradlew clean test
+```
+
+## Ver reporte
+
+```bash
+open build/reports/serenity/index.html
+```
