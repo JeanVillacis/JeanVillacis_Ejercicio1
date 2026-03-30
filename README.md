@@ -77,3 +77,9 @@ open build/reports/serenity/index.html
 > ```bash
 > ./gradlew clean test aggregate && open build/reports/serenity/index.html
 > ```
+
+## Capturas de pantalla
+
+La carpeta [`screenshots/`](screenshots/) contiene las capturas tomadas automáticamente por Serenity durante la ejecución de las pruebas. Se genera una captura después de cada paso, lo que permite evidenciar el comportamiento de la aplicación sin necesidad de correr el proyecto.
+
+Las imágenes están nombradas secuencialmente (`paso_01.png`, `paso_02.png`, ...) siguiendo el orden de ejecución del escenario.
