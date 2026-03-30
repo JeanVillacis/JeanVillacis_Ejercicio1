@@ -39,14 +39,41 @@ src/test/resources/
 └── serenity.conf   # Configuración Serenity
 ```
 
-## Ejecutar pruebas
+## Requisitos previos
 
+- Java 17 instalado
+- Google Chrome instalado
+- Conexión a internet (el WebDriverManager descarga el driver automáticamente)
+
+## Pasos para ejecutar
+
+**1. Clonar el repositorio**
+```bash
+git clone <url-del-repositorio>
+cd SERENITY-EJERCICIO1
+```
+
+**2. Dar permisos al wrapper de Gradle** (solo la primera vez en Mac/Linux)
+```bash
+chmod +x gradlew
+```
+
+**3. Compilar y ejecutar las pruebas**
 ```bash
 ./gradlew clean test
 ```
 
-## Ver reporte
+**4. Generar el reporte Serenity**
+```bash
+./gradlew aggregate
+```
 
+**5. Abrir el reporte**
 ```bash
 open build/reports/serenity/index.html
 ```
+
+> También puedes ejecutar los pasos 3, 4 y 5 en un solo comando:
+> ```bash
+> ./gradlew clean test aggregate && open build/reports/serenity/index.html
+> ```
